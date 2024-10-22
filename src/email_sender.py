@@ -42,7 +42,9 @@ def send_email(recipient_email, subject_text, email_body):
         # Enter recipient's email address
         to_field = wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="primaryContainer"]/div[5]/div/div[1]/div/div[5]/div[3]/div/div[5]/div[1]/div/div[3]/div[4]/div/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div/div/div/span/div[1]/form/input')))
         to_field.send_keys(recipient_email)
+        time.sleep(2)
         to_field.send_keys(Keys.RETURN)
+        time.sleep(2)
 
         # Enter the subject of the email
         subject_field = wait.until(EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div/div[3]/div[5]/div/div[1]/div/div[5]/div[3]/div/div[5]/div[1]/div/div[3]/div[4]/div/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[6]/div[2]/input')))
