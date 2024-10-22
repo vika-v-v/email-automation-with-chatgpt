@@ -48,18 +48,13 @@ def extract_information_from_notion_item(item):
     automate_field = properties.get('Automate', {}).get('select', None)
     automate = automate_field['name'] if automate_field else 'N/A'
 
-    # Telegram (from 'Telegram' field)
-    telegram = properties.get('Telegram', {}).get('rich_text', [])
-    telegram_contact = telegram[0]['plain_text'] if telegram else 'N/A'
-
     return {
         'page_id': page_id,
         'startup_name': startup_name,
         'startup_notes': startup_notes,
         'email': email,
         'antwort': antwort,
-        'automate': automate,
-        'telegram_contact': telegram_contact
+        'automate': automate
     }
 
 
