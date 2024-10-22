@@ -1,5 +1,5 @@
 # About
-This repository contains the Python script used to automate the sending of emails. It takes the notion database and sends emails to all contacts marked as not contacted. The email is edited with ChatGPT-4 before sending to better suit the recipient.
+This repository contains the Python script used to automate the sending of emails. It takes the notion database and sends emails to all contacts marked as not contacted. The email is edited with ChatGPT-4 before sending to better suit the recipient. After the email is sent the status in the notion database is updated and the email copy is saved as a text in the database item.
 
 # Database structure
 In my case, I am emailing the startups to propose the collab, so the script is using this strcuture, but you can change it if needed.
